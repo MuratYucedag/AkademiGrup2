@@ -154,6 +154,7 @@ namespace AkademiGrup2
             this.btnList.TabIndex = 12;
             this.btnList.Text = "Listele";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnSave
             // 
@@ -163,6 +164,7 @@ namespace AkademiGrup2
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Kaydet";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnUpdate
             // 
@@ -172,6 +174,7 @@ namespace AkademiGrup2
             this.btnUpdate.TabIndex = 14;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -181,6 +184,7 @@ namespace AkademiGrup2
             this.btnDelete.TabIndex = 15;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dataGridView1
             // 
