@@ -16,7 +16,7 @@ namespace AkademiGrup2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmProduct());
+            Application.Run(new FrmChart());
         }
     }
 }
