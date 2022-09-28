@@ -71,6 +71,12 @@
     <Compile Include="FrmNavigation.Designer.cs">
       <DependentUpon>FrmNavigation.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNewAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNewAccount.Designer.cs">
+      <DependentUpon>FrmNewAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNavigation.resx">
       <DependentUpon>FrmNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNewAccount.resx">
+      <DependentUpon>FrmNewAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>

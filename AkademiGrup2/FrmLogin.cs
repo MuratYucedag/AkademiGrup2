@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,14 +20,23 @@ namespace AkademiGrup2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "admin" && textBox2.Text == "1234")
+            SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-07T8MF2\MSSQLSERVER01;initial Catalog=DbAkademiGrup2;integrated security=True");
+
+            connection.Open();
+            SqlCommand command = new SqlCommand("Select * From TblAdmin where Username=@p1 and Password=@p2", connection);
+            command.Parameters.AddWithValue("@p1", txtUsername.Text);
+            command.Parameters.AddWithValue("@p2", txtPassword.Text);
+            SqlDataReader dataReader = command.ExecuteReader();
+            if (dataReader.Read())
             {
-                MessageBox.Show("Stok Takip Programı Admin Paneline Hoş Geldiniz");
+                FrmNavigation frm = new FrmNavigation();
+                frm.Show();
             }
             else
             {
-                MessageBox.Show("Hatalı kullanıcı adı veya şifre!");
+                MessageBox.Show("Hatalı kullanıcı adı veya şifre girdiniz");
             }
+            connection.Close();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -40,15 +50,21 @@ namespace AkademiGrup2
             sayac++;
             if (sayac == 1)
             {
-                textBox2.UseSystemPasswordChar = false;
+                txtPassword.UseSystemPasswordChar = false;
                 button2.Text = "Şifreyi Gizle";
             }
             if (sayac == 2)
             {
-                textBox2.UseSystemPasswordChar = true;
+                txtPassword.UseSystemPasswordChar = true;
                 button2.Text = "Şifreyi Göster";
                 sayac = 0;
             }
+        }
+
+        private void lnlNewAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmNewAccount frm = new FrmNewAccount();
+            frm.Show();
         }
     }
 }

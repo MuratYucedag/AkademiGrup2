@@ -30,14 +30,15 @@ namespace AkademiGrup2
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.lnkForgotPassword = new System.Windows.Forms.LinkLabel();
+            this.chkRememberMe = new System.Windows.Forms.CheckBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.lnlNewAccount = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -49,51 +50,51 @@ namespace AkademiGrup2
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanıcı Adınız:";
             // 
-            // textBox1
+            // txtUsername
             // 
-            this.textBox1.Location = new System.Drawing.Point(156, 81);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 27);
-            this.textBox1.TabIndex = 1;
+            this.txtUsername.Location = new System.Drawing.Point(156, 81);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(240, 27);
+            this.txtUsername.TabIndex = 1;
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.Location = new System.Drawing.Point(156, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 34);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Giriş Yap";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.Location = new System.Drawing.Point(156, 151);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(240, 34);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "Giriş Yap";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
             // 
-            // linkLabel1
+            // lnkForgotPassword
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(282, 202);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(114, 19);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Şifremi Unuttum";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lnkForgotPassword.AutoSize = true;
+            this.lnkForgotPassword.Location = new System.Drawing.Point(282, 202);
+            this.lnkForgotPassword.Name = "lnkForgotPassword";
+            this.lnkForgotPassword.Size = new System.Drawing.Size(114, 19);
+            this.lnkForgotPassword.TabIndex = 3;
+            this.lnkForgotPassword.TabStop = true;
+            this.lnkForgotPassword.Text = "Şifremi Unuttum";
+            this.lnkForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // checkBox1
+            // chkRememberMe
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(156, 201);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(105, 23);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Beni Hatırla";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkRememberMe.AutoSize = true;
+            this.chkRememberMe.Location = new System.Drawing.Point(156, 201);
+            this.chkRememberMe.Name = "chkRememberMe";
+            this.chkRememberMe.Size = new System.Drawing.Size(105, 23);
+            this.chkRememberMe.TabIndex = 4;
+            this.chkRememberMe.Text = "Beni Hatırla";
+            this.chkRememberMe.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(156, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(240, 27);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.txtPassword.Location = new System.Drawing.Point(156, 114);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(240, 27);
+            this.txtPassword.TabIndex = 6;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -125,19 +126,31 @@ namespace AkademiGrup2
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // lnlNewAccount
+            // 
+            this.lnlNewAccount.AutoSize = true;
+            this.lnlNewAccount.Location = new System.Drawing.Point(282, 234);
+            this.lnlNewAccount.Name = "lnlNewAccount";
+            this.lnlNewAccount.Size = new System.Drawing.Size(142, 19);
+            this.lnlNewAccount.TabIndex = 9;
+            this.lnlNewAccount.TabStop = true;
+            this.lnlNewAccount.Text = "Bir Hesabın Yok Mu?";
+            this.lnlNewAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnlNewAccount_LinkClicked);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 265);
+            this.Controls.Add(this.lnlNewAccount);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.chkRememberMe);
+            this.Controls.Add(this.lnkForgotPassword);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -150,13 +163,14 @@ namespace AkademiGrup2
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.LinkLabel lnkForgotPassword;
+        private System.Windows.Forms.CheckBox chkRememberMe;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.LinkLabel lnlNewAccount;
     }
 }
